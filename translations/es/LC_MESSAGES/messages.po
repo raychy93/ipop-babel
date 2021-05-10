@@ -1,0 +1,226 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-05-05 17:39-0400\n"
+"PO-Revision-Date: 2021-05-05 17:41-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app.py:359
+msgid "You've already signed up with that email, log in instead!"
+msgstr "Ya se ha registrado con ese correo electrónico, ¡inicie sesión en su lugar!"
+
+#: app.py:427
+msgid "That email does not exist, please try again."
+msgstr "Ese correo electrónico no existe, inténtelo de nuevo."
+
+#: app.py:432
+msgid "Password incorrect, please try again"
+msgstr "Contraseña incorrecta, inténtelo de nuevo"
+
+#: app.py:464
+msgid "An email has been sent with instructions to reset your password"
+msgstr "Se ha enviado un correo electrónico con instrucciones para restablecer su contraseña."
+
+#: app.py:476
+msgid "That is an invalid or expired token"
+msgstr "Eso es un token inválido o caducado"
+
+#: env/Lib/site-packages/flask_wtf/file.py:50
+#: env/Lib/site-packages/wtforms/validators.py:218
+#: env/Lib/site-packages/wtforms/validators.py:258
+msgid "This field is required."
+msgstr "Este campo es requerido."
+
+#: env/Lib/site-packages/flask_wtf/file.py:83
+msgid "File does not have an approved extension: {extensions}"
+msgstr "El archivo no tiene una extensión aprobada: {extensions}"
+
+#: env/Lib/site-packages/flask_wtf/file.py:88
+msgid "File does not have an approved extension."
+msgstr "El archivo no tiene una extensión aprobada."
+
+#: env/Lib/site-packages/wtforms/validators.py:68
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Nombre de campo no válido '% s'."
+
+#: env/Lib/site-packages/wtforms/validators.py:76
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "El campo debe ser igual a% (other_name) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:109
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "El campo debe tener al menos% (min) d caracteres de longitud."
+msgstr[1] "El campo debe tener al menos% (min) d caracteres de longitud."
+
+#: env/Lib/site-packages/wtforms/validators.py:112
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "El campo no puede tener más de% (máx.) D caracteres."
+msgstr[1] "El campo no puede tener más de% (máx.) D caracteres."
+
+#: env/Lib/site-packages/wtforms/validators.py:115
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] "El campo debe tener exactamente% (máx.) D caracteres de longitud."
+msgstr[1] "El campo debe tener exactamente% (máx.) D caracteres de longitud."
+
+#: env/Lib/site-packages/wtforms/validators.py:118
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:154
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:156
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:290
+msgid "Invalid input."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:355
+msgid "Invalid email address."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:388
+msgid "Invalid IP address."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:430
+msgid "Invalid Mac address."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:465
+msgid "Invalid URL."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:485
+msgid "Invalid UUID."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:515
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/validators.py:547
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/csrf/core.py:98
+#: env/Lib/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:61
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:69
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:74
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:87
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:164
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:166
+#: env/Lib/site-packages/wtforms/ext/django/fields.py:95
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: env/Lib/site-packages/wtforms/fields/core.py:513
+msgid "Not a valid choice"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:75
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:505
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:539
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:546
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:629
+#: env/Lib/site-packages/wtforms/fields/core.py:639
+msgid "Not a valid integer value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:705
+msgid "Not a valid decimal value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:732
+msgid "Not a valid float value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:793
+msgid "Not a valid datetime value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:810
+msgid "Not a valid date value"
+msgstr ""
+
+#: env/Lib/site-packages/wtforms/fields/core.py:827
+msgid "Not a valid time value"
+msgstr ""
+
