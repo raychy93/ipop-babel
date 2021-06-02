@@ -1,0 +1,1171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-06-01 17:03-0400\n"
+"PO-Revision-Date: 2021-06-01 17:06-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app.py:192 app.py:274
+msgid "Your username"
+msgstr "Seu nome de usuário"
+
+#: app.py:193 app.py:305 app.py:330
+msgid "Your email"
+msgstr "Seu email"
+
+#: app.py:195 app.py:307 app.py:340
+msgid "Your password"
+msgstr "Sua senha"
+
+#: app.py:196 app.py:341
+msgid "Confirm Password"
+msgstr "Confirme a Senha"
+
+#: app.py:198
+msgid "Both password fields must be equal!"
+msgstr "Ambos os campos de senha devem ser iguais!"
+
+#: app.py:199 app.py:275
+msgid "Your organization type"
+msgstr "Seu tipo de organização"
+
+#: app.py:200 app.py:276
+msgid "Startup"
+msgstr "Comece"
+
+#: app.py:200 app.py:276
+msgid "Researcher"
+msgstr "investigador"
+
+#: app.py:201 app.py:277
+msgid "Hub or Incubator"
+msgstr "Hub ou Incubadora"
+
+#: app.py:201 app.py:277
+msgid "Innovation hub or Incubator"
+msgstr "Centro de inovação ou incubadora"
+
+#: app.py:202 app.py:278
+msgid "Research Center"
+msgstr "Centro de Pesquisa"
+
+#: app.py:202 app.py:278
+msgid "Lab or Research Center"
+msgstr "Laboratório ou Centro de Pesquisa"
+
+#: app.py:202 app.py:278
+msgid "Corporate"
+msgstr "Corporativo"
+
+#: app.py:203 app.py:279
+msgid "Consulting Firm"
+msgstr "Empresa de Consultoria"
+
+#: app.py:204 app.py:280
+msgid "Investment Group"
+msgstr "Grupo de Investimento"
+
+#: app.py:204 app.py:280
+msgid "other organization"
+msgstr "outra organização"
+
+#: app.py:205 app.py:281
+msgid "Your organization's name"
+msgstr "O nome da sua organização"
+
+#: app.py:206
+msgid "Tell us about your organization."
+msgstr "Conte-nos sobre sua organização."
+
+#: app.py:208 app.py:282
+msgid "Your city"
+msgstr "Sua cidade"
+
+#: app.py:209 app.py:283
+msgid "Your country"
+msgstr "Seu país"
+
+#: app.py:210
+msgid "Your subscription type"
+msgstr "Seu tipo de assinatura"
+
+#: app.py:211
+msgid "Startup - Free"
+msgstr "Startup - grátis"
+
+#: app.py:212
+msgid "Researcher - Free"
+msgstr "Pesquisador - Gratuito"
+
+#: app.py:213
+msgid "Innovation hub - Free"
+msgstr "Centro de inovação - grátis"
+
+#: app.py:214
+msgid "Lab or Research Center - Free"
+msgstr "Laboratório ou Centro de Pesquisa - Gratuito"
+
+#: app.py:215
+msgid "Corporate - Partner"
+msgstr "Corporativo - Sócio"
+
+#: app.py:216
+msgid "Consulting Firm - Sponsor"
+msgstr "Empresa de Consultoria - Patrocinador"
+
+#: app.py:217
+msgid "Investment Group - Sponsor"
+msgstr "Grupo de Investimento - Patrocinador"
+
+#: app.py:219 templates/403.html:42 templates/404.html:42
+#: templates/dashboard.html:42 templates/header.html:42 templates/index.html:45
+#: templates/introductions_my.html:42 templates/login.html:42
+#: templates/organization_view.html:44 templates/organization_view.html:80
+#: templates/organizations.html:41 templates/project_edit.html:42
+#: templates/project_view.html:43 templates/project_view.html:90
+#: templates/projects.html:41 templates/projects_my.html:41
+#: templates/proposal_register.html:41 templates/proposal_respond.html:43
+#: templates/proposals_my.html:42 templates/reset_request.html:42
+#: templates/reset_token.html:42 templates/tag_register.html:44
+#: templates/technologies.html:41 templates/technology_view.html:43
+#: templates/technology_view.html:79 templates/user_edit.html:43
+#: templates/user_register.html:42
+msgid "Register"
+msgstr "Registro"
+
+#: app.py:223 app.py:249
+msgid "Project name"
+msgstr "Nome do Projeto"
+
+#: app.py:224 app.py:250
+msgid "The status of your project"
+msgstr "O status do seu projeto"
+
+#: app.py:225 app.py:251
+msgid "Draft"
+msgstr "Rascunho"
+
+#: app.py:225 app.py:251
+msgid "Open"
+msgstr "Abrir"
+
+#: app.py:225 app.py:251
+msgid "Ongoing"
+msgstr "Em andamento"
+
+#: app.py:226 app.py:252
+msgid "Close"
+msgstr "Perto"
+
+#: app.py:226 app.py:252
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: app.py:227 app.py:253
+msgid "The stage of your project"
+msgstr "O estágio do seu projeto"
+
+#: app.py:228 app.py:254
+msgid "Prototyping"
+msgstr "Prototipagem"
+
+#: app.py:228 app.py:254
+msgid "Validation"
+msgstr "Validação"
+
+#: app.py:228 app.py:254
+msgid "Scaling"
+msgstr "Dimensionamento"
+
+#: app.py:229 app.py:255
+msgid "Technology readiness levels"
+msgstr "Níveis de prontidão de tecnologia"
+
+#: app.py:230 app.py:256
+msgid "4 Lab testing"
+msgstr "4 testes de laboratório"
+
+#: app.py:230 app.py:256
+msgid "5 Simulated testing"
+msgstr "5 testes simulados"
+
+#: app.py:231 app.py:257
+msgid "6 Prototype development"
+msgstr "6 Desenvolvimento de protótipo"
+
+#: app.py:232 app.py:258
+msgid "7 Prototype ready"
+msgstr "7 Protótipo pronto"
+
+#: app.py:232 app.py:258
+msgid "7  Prototype ready"
+msgstr "7 Protótipo pronto"
+
+#: app.py:233 app.py:259
+msgid "8 Prototype validated"
+msgstr "8 Protótipo validado"
+
+#: app.py:234 app.py:260
+msgid "9 Product market-ready"
+msgstr "9 Produto pronto para o mercado"
+
+#: app.py:235 app.py:261
+msgid "City where the project will be executed"
+msgstr "Cidade onde o projeto será executado"
+
+#: app.py:236 app.py:262
+msgid "Country where the project will be executed"
+msgstr "País onde o projeto será executado"
+
+#: app.py:237 app.py:263
+msgid "Tell us about your project."
+msgstr "Conte-nos sobre seu projeto."
+
+#: app.py:239 app.py:265
+msgid "What is the main deliverable of the project?"
+msgstr "Qual é a principal entrega do projeto?"
+
+#: app.py:240 app.py:266 app.py:297
+msgid "Type of move"
+msgstr "Tipo de movimento"
+
+#: app.py:240 app.py:266 app.py:297
+msgid "Requested"
+msgstr "Requeridos"
+
+#: app.py:240 app.py:266 app.py:297
+msgid "Offered"
+msgstr "Oferecido"
+
+#: app.py:241 app.py:267 app.py:298
+msgid "Amount in Canadian Dollars $:"
+msgstr "Valor em dólares canadenses $:"
+
+#: app.py:245
+msgid "Submit"
+msgstr "Enviar"
+
+#: app.py:287
+msgid "Tags or key words"
+msgstr "Tags ou palavras-chave"
+
+#: app.py:288
+msgid "Tag - Submit"
+msgstr "Tag - enviar"
+
+#: app.py:292
+msgid "Title of your proposal"
+msgstr "Título da sua proposta"
+
+#: app.py:293
+msgid "The status of the proposal"
+msgstr "O status da proposta"
+
+#: app.py:294
+msgid "Accepted"
+msgstr "Aceitaram"
+
+#: app.py:294
+msgid "Rejected"
+msgstr "Rejeitado"
+
+#: app.py:295
+msgid "Description of your proposal."
+msgstr "Descrição da sua proposta."
+
+#: app.py:299
+msgid "Proposal attachments"
+msgstr "Anexos de proposta"
+
+#: app.py:301
+msgid "Proposal - Submit"
+msgstr "Proposta - Enviar"
+
+#: app.py:306 app.py:331
+msgid "Invalid email"
+msgstr "E-mail inválido"
+
+#: app.py:308
+msgid "Remember me"
+msgstr "Lembre de mim"
+
+#: app.py:309 templates/403.html:41 templates/introductions_my.html:41
+msgid "Log In"
+msgstr "Conecte-se"
+
+#: app.py:324
+msgid "Provide a short message"
+msgstr "Forneça uma mensagem curta"
+
+#: app.py:326
+msgid "Expression of Interest EOI - Submit"
+msgstr "Manifestação de interesse EOI - Enviar"
+
+#: app.py:332
+msgid "Request Password Reset"
+msgstr "Solicitar redefinição de senha"
+
+#: app.py:337
+msgid "There is not account with that email."
+msgstr "Não há conta com esse e-mail."
+
+#: app.py:343 templates/reset_request.html:56 templates/reset_request.html:66
+#: templates/reset_token.html:56 templates/reset_token.html:67
+msgid "Reset Password"
+msgstr "Redefinir senha"
+
+#: app.py:359
+msgid "You've already signed up with that email, log in instead!"
+msgstr "Você já se inscreveu com esse e-mail, faça login!"
+
+#: app.py:427
+msgid "That email does not exist, please try again."
+msgstr "Esse e-mail não existe, tente novamente."
+
+#: app.py:432
+msgid "Password incorrect, please try again"
+msgstr "Senha incorreta, por favor tente novamente"
+
+#: app.py:463
+msgid "An email has been sent with instructions to reset your password"
+msgstr "Um e-mail foi enviado com instruções para redefinir sua senha"
+
+#: app.py:475
+msgid "That is an invalid or expired token"
+msgstr "Este é um token inválido ou expirado"
+
+#: env/Lib/site-packages/flask_wtf/file.py:50
+#: env/Lib/site-packages/wtforms/validators.py:218
+#: env/Lib/site-packages/wtforms/validators.py:258
+msgid "This field is required."
+msgstr "Este campo é obrigatório."
+
+#: env/Lib/site-packages/flask_wtf/file.py:83
+msgid "File does not have an approved extension: {extensions}"
+msgstr "O arquivo não tem uma extensão aprovada: {extensions}"
+
+#: env/Lib/site-packages/flask_wtf/file.py:88
+msgid "File does not have an approved extension."
+msgstr "O arquivo não tem uma extensão aprovada."
+
+#: env/Lib/site-packages/wtforms/validators.py:68
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "Nome de campo inválido '% s'."
+
+#: env/Lib/site-packages/wtforms/validators.py:76
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr "O campo deve ser igual a% (other_name) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:109
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/Lib/site-packages/wtforms/validators.py:112
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/Lib/site-packages/wtforms/validators.py:115
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/Lib/site-packages/wtforms/validators.py:118
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr "O campo deve ter entre% (min) d e% (max) d caracteres de comprimento."
+
+#: env/Lib/site-packages/wtforms/validators.py:154
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "O número deve ser pelo menos% (min) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:156
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "O número deve ser no máximo% (max) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "O número deve estar entre% (min) s e% (max) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:290
+msgid "Invalid input."
+msgstr "Entrada inválida."
+
+#: env/Lib/site-packages/wtforms/validators.py:355
+msgid "Invalid email address."
+msgstr "Endereço de email invalido."
+
+#: env/Lib/site-packages/wtforms/validators.py:388
+msgid "Invalid IP address."
+msgstr "Endereço IP inválido."
+
+#: env/Lib/site-packages/wtforms/validators.py:430
+msgid "Invalid Mac address."
+msgstr "Endereço Mac inválido."
+
+#: env/Lib/site-packages/wtforms/validators.py:465
+msgid "Invalid URL."
+msgstr "URL inválida."
+
+#: env/Lib/site-packages/wtforms/validators.py:485
+msgid "Invalid UUID."
+msgstr "UUID inválido."
+
+#: env/Lib/site-packages/wtforms/validators.py:515
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Valor inválido, deve ser um dos seguintes:% (valores) s."
+
+#: env/Lib/site-packages/wtforms/validators.py:547
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Valor inválido, não pode ser:% (valores) s."
+
+#: env/Lib/site-packages/wtforms/csrf/core.py:98
+#: env/Lib/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr "Token CSRF inválido"
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:61
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr "Token CSRF ausente"
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:69
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr "CSRF falhou"
+
+#: env/Lib/site-packages/wtforms/csrf/session.py:74
+#: env/Lib/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr "Token CSRF expirado"
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:87
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:164
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:166
+#: env/Lib/site-packages/wtforms/ext/django/fields.py:95
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: env/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: env/Lib/site-packages/wtforms/fields/core.py:513
+msgid "Not a valid choice"
+msgstr "Não é uma escolha válida"
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr "Não é uma lista válida"
+
+#: env/Lib/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr "Não é uma lista de inteiros válida"
+
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr "Insira um valor de data / hora"
+
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:75
+#: env/Lib/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr "Entrada de data / hora inválida"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:505
+msgid "Invalid Choice: could not coerce"
+msgstr "Escolha inválida: não foi possível coagir"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:539
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+"Escolha (s) inválida (s): uma ou mais entradas de dados não puderam ser "
+"forçadas"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:546
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr "'% (value) s' não é uma escolha válida para este campo"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:629
+#: env/Lib/site-packages/wtforms/fields/core.py:639
+msgid "Not a valid integer value"
+msgstr "Não é um valor inteiro válido"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:705
+msgid "Not a valid decimal value"
+msgstr "Não é um valor decimal válido"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:732
+msgid "Not a valid float value"
+msgstr "Não é um valor flutuante válido"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:793
+msgid "Not a valid datetime value"
+msgstr "Não é um valor de data e hora válido"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:810
+msgid "Not a valid date value"
+msgstr "Não é um valor de data válido"
+
+#: env/Lib/site-packages/wtforms/fields/core.py:827
+msgid "Not a valid time value"
+msgstr "Não é um valor de tempo válido"
+
+#: templates/403.html:28 templates/404.html:28 templates/dashboard.html:29
+#: templates/header.html:29 templates/index.html:31
+#: templates/introductions_my.html:28 templates/introductions_my.html:58
+#: templates/introductions_my.html:64 templates/introductions_my.html:139
+#: templates/login.html:28 templates/organization_view.html:30
+#: templates/organization_view.html:61 templates/organization_view.html:90
+#: templates/organizations.html:27 templates/organizations.html:60
+#: templates/project_edit.html:28 templates/project_register.html:29
+#: templates/project_view.html:29 templates/projects.html:27
+#: templates/projects.html:54 templates/projects_my.html:27
+#: templates/proposal_register.html:27 templates/proposal_respond.html:29
+#: templates/proposals_my.html:28 templates/reset_request.html:28
+#: templates/reset_token.html:28 templates/tag_register.html:30
+#: templates/technologies.html:27 templates/technologies.html:60
+#: templates/technology_view.html:29 templates/technology_view.html:60
+#: templates/user_edit.html:29 templates/user_register.html:28
+msgid "Projects"
+msgstr "Projetos"
+
+#: templates/403.html:29 templates/404.html:29 templates/dashboard.html:30
+#: templates/header.html:30 templates/index.html:32
+#: templates/introductions_my.html:29 templates/login.html:29
+#: templates/organization_view.html:31 templates/organizations.html:28
+#: templates/project_edit.html:29 templates/project_register.html:30
+#: templates/project_view.html:30 templates/projects.html:28
+#: templates/projects_my.html:28 templates/proposal_register.html:28
+#: templates/proposal_respond.html:30 templates/proposals_my.html:29
+#: templates/reset_request.html:29 templates/reset_token.html:29
+#: templates/tag_register.html:31 templates/technologies.html:28
+#: templates/technology_view.html:30 templates/user_edit.html:30
+#: templates/user_register.html:29
+msgid "Technologies"
+msgstr "Tecnologias"
+
+#: templates/403.html:30 templates/404.html:30 templates/dashboard.html:31
+#: templates/header.html:31 templates/index.html:33
+#: templates/introductions_my.html:30 templates/login.html:30
+#: templates/organization_view.html:32 templates/organizations.html:29
+#: templates/projects_my.html:29 templates/proposal_register.html:29
+#: templates/proposal_respond.html:31 templates/proposals_my.html:30
+#: templates/reset_request.html:30 templates/reset_token.html:30
+#: templates/tag_register.html:32 templates/technology_view.html:31
+#: templates/user_edit.html:31 templates/user_register.html:30
+msgid "Organizations"
+msgstr "Organizações"
+
+#: templates/403.html:36 templates/404.html:36 templates/dashboard.html:37
+#: templates/header.html:37 templates/index.html:39
+#: templates/introductions_my.html:36 templates/login.html:36
+#: templates/organization_view.html:38 templates/organizations.html:35
+#: templates/project_edit.html:36 templates/project_register.html:37
+#: templates/project_view.html:37 templates/projects.html:35
+#: templates/projects_my.html:35 templates/proposal_register.html:35
+#: templates/proposal_respond.html:37 templates/proposals_my.html:36
+#: templates/reset_request.html:36 templates/reset_token.html:36
+#: templates/tag_register.html:38 templates/technologies.html:35
+#: templates/technology_view.html:37 templates/user_edit.html:37
+#: templates/user_register.html:36
+msgid "Log Out"
+msgstr "Sair"
+
+#: templates/403.html:55
+msgid "You dont have permission to access this."
+msgstr "Você não tem permissão para acessar isso."
+
+#: templates/403.html:56
+msgid "Not this time, sorry about that."
+msgstr "Não desta vez, desculpe por isso."
+
+#: templates/403.html:57 templates/404.html:57
+msgid "go somewhere nice"
+msgstr "vá a algum lugar legal"
+
+#: templates/404.html:41 templates/dashboard.html:41 templates/header.html:41
+#: templates/index.html:44 templates/login.html:41 templates/login.html:56
+#: templates/organization_view.html:43 templates/organizations.html:40
+#: templates/project_edit.html:41 templates/project_register.html:42
+#: templates/project_view.html:42 templates/projects.html:40
+#: templates/projects_my.html:40 templates/proposal_register.html:40
+#: templates/proposal_respond.html:42 templates/proposals_my.html:41
+#: templates/reset_request.html:41 templates/reset_token.html:41
+#: templates/tag_register.html:43 templates/technologies.html:40
+#: templates/technology_view.html:42 templates/user_edit.html:42
+#: templates/user_register.html:41
+msgid "Login"
+msgstr "Conecte-se"
+
+#: templates/404.html:55
+msgid "Page Not Found"
+msgstr "Página não encontrada"
+
+#: templates/404.html:56
+msgid "What you were looking for is just not there."
+msgstr "O que você estava procurando simplesmente não está lá."
+
+#: templates/dashboard.html:57 templates/header.html:57
+msgid "My Introductions"
+msgstr "Minhas apresentações"
+
+#: templates/dashboard.html:58 templates/header.html:58
+msgid "My Projects"
+msgstr "Meus projetos"
+
+#: templates/dashboard.html:59 templates/header.html:59
+msgid "My Proposals"
+msgstr "Minhas propostas"
+
+#: templates/dashboard.html:60 templates/header.html:60
+msgid "My Billing"
+msgstr "Meu faturamento"
+
+#: templates/dashboard.html:63 templates/header.html:63
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/dashboard.html:64 templates/header.html:64
+msgid "Settings"
+msgstr "Definições"
+
+#: templates/dashboard.html:69
+msgid "Welcome"
+msgstr "Receber"
+
+#: templates/dashboard.html:69
+msgid "User is"
+msgstr "Usuário é"
+
+#: templates/dashboard.html:75
+msgid "Number of projects"
+msgstr "Número de projetos"
+
+#: templates/dashboard.html:80
+msgid "Number of Expression of Interest"
+msgstr "Número de manifestação de interesse"
+
+#: templates/dashboard.html:84
+msgid "Proposals"
+msgstr "Propostas"
+
+#: templates/dashboard.html:85
+msgid "Number of Proposals"
+msgstr "Número de propostas"
+
+#: templates/dashboard.html:89
+msgid "Amount"
+msgstr "Resultar"
+
+#: templates/dashboard.html:90
+msgid "Billing Amount"
+msgstr "Valor de cobrança"
+
+#: templates/dashboard.html:94
+msgid "Section title"
+msgstr "Título da seção"
+
+#: templates/eoi_edit.html:16
+msgid "Respond the Expression of Interest"
+msgstr "Responda à manifestação de interesse"
+
+#: templates/header.html:56
+msgid "Overview"
+msgstr "Visão geral"
+
+#: templates/index.html:20
+msgid "Toggle navigation"
+msgstr "Alternar de navegação"
+
+#: templates/index.html:38
+msgid "accounts"
+msgstr "contas"
+
+#: templates/index.html:65
+msgid "A research and development (R&D) collaboration platform"
+msgstr "Uma plataforma de colaboração de pesquisa e desenvolvimento (P&D)"
+
+#: templates/index.html:66
+msgid "We connect industries with researchers and other stakeholders"
+msgstr "Conectamos indústrias com pesquisadores e outras partes interessadas"
+
+#: templates/index.html:66
+msgid "to support Prototyping, Validation and Scaling."
+msgstr "para apoiar a Prototipagem, Validação e Escalonamento."
+
+#: templates/index.html:77 templates/index.html:249
+msgid "Find your R&D partner Today."
+msgstr "Encontre seu parceiro de P&D hoje."
+
+#: templates/index.html:78 templates/index.html:250
+msgid "Register for a Free Account"
+msgstr "Cadastre-se para criar uma conta gratuita"
+
+#: templates/index.html:93
+msgid "Intelligent"
+msgstr "Inteligente"
+
+#: templates/index.html:94
+msgid ""
+"Our matching technology scans numerous profiles & finds the most relevant "
+"partners."
+msgstr ""
+"Nossa tecnologia correspondente analisa vários perfis e encontra os parceiros "
+"mais relevantes."
+
+#: templates/index.html:99
+msgid "Convenient"
+msgstr "Conveniente"
+
+#: templates/index.html:100
+msgid "Access innovative technologies with researchers & startups"
+msgstr "Acesse tecnologias inovadoras com pesquisadores e startups"
+
+#: templates/index.html:105
+msgid "Synergistic"
+msgstr "Sinérgico"
+
+#: templates/index.html:106
+msgid "Access validation opportunities with industries & organizations"
+msgstr "Acesse oportunidades de validação com indústrias e organizações"
+
+#: templates/index.html:111
+msgid "International"
+msgstr "Internacional"
+
+#: templates/index.html:112
+msgid "Ongoing support for international R&D projects"
+msgstr "Suporte contínuo para projetos internacionais de P&D"
+
+#: templates/index.html:138 templates/index.html:145
+msgid "Testimonial customer 1."
+msgstr "Cliente de depoimento 1."
+
+#: templates/index.html:139 templates/index.html:146
+msgid "Pebbles, New York"
+msgstr "Pebbles, Nova York"
+
+#: templates/index.html:154
+msgid "Previous"
+msgstr "Anterior"
+
+#: templates/index.html:158
+msgid "Next"
+msgstr "Próximo"
+
+#: templates/index.html:181
+msgid "A Plan for Everyones Needs"
+msgstr "Um plano para as necessidades de todos"
+
+#: templates/index.html:182
+msgid "Simple and affordable price plans for your organization."
+msgstr "Planos de preços simples e acessíveis para sua organização."
+
+#: templates/index.html:189
+msgid "Early Majority"
+msgstr "Maioria inicial"
+
+#: templates/index.html:192
+msgid "Free"
+msgstr "Livre"
+
+#: templates/index.html:193
+msgid "User Profile"
+msgstr "Perfil de usuário"
+
+#: templates/index.html:194
+msgid "Two Open Projects"
+msgstr "Dois Projetos Abertos"
+
+#: templates/index.html:195
+msgid "Unlimited Project-Connections"
+msgstr "Conexões de projeto ilimitadas"
+
+#: templates/index.html:196
+msgid "Effective Project-Connection"
+msgstr "Conexão de Projeto Eficaz"
+
+#: templates/index.html:198 templates/index.html:214 templates/index.html:230
+msgid "Sign Up"
+msgstr "Inscrever-se"
+
+#: templates/index.html:206
+msgid "Early Adopter"
+msgstr "Early Adopter"
+
+#: templates/index.html:210
+msgid "Early Majority +"
+msgstr "Maioria inicial +"
+
+#: templates/index.html:211
+msgid "Multiple Open  Projects"
+msgstr "Vários Projetos Abertos"
+
+#: templates/index.html:212
+msgid "5 User connections"
+msgstr "5 conexões de usuário"
+
+#: templates/index.html:213
+msgid "Account manager"
+msgstr "Gerente de contas"
+
+#: templates/index.html:222
+msgid "Innovator"
+msgstr "Inovador"
+
+#: templates/index.html:226
+msgid "Early Adopter +"
+msgstr "Early Adopter +"
+
+#: templates/index.html:227
+msgid "5% Project manager"
+msgstr "5% Gerente de projeto"
+
+#: templates/index.html:228
+msgid "International R&D agreements"
+msgstr "Acordos internacionais de P&D"
+
+#: templates/index.html:229
+msgid "International IP agreements"
+msgstr "Acordos internacionais de IP"
+
+#: templates/introductions_my.html:57 templates/introductions_my.html:138
+#: templates/projects_my.html:56 templates/proposal_register.html:54
+#: templates/proposal_respond.html:57 templates/proposals_my.html:56
+#: templates/proposals_my.html:94 templates/user_edit.html:84
+msgid "Return to my dashboard"
+msgstr "Retornar ao meu painel"
+
+#: templates/introductions_my.html:65 templates/introductions_my.html:102
+#: templates/introductions_my.html:147 templates/introductions_my.html:194
+#: templates/organization_view.html:98 templates/projects.html:62
+#: templates/projects_my.html:64 templates/proposals_my.html:66
+#: templates/proposals_my.html:100 templates/technology_view.html:97
+msgid "Status"
+msgstr "Status"
+
+#: templates/introductions_my.html:66 templates/introductions_my.html:100
+#: templates/introductions_my.html:192 templates/organizations.html:61
+#: templates/technologies.html:61
+msgid "Name"
+msgstr "Nome"
+
+#: templates/introductions_my.html:67 templates/introductions_my.html:101
+#: templates/introductions_my.html:193 templates/organization_view.html:61
+#: templates/organizations.html:62 templates/proposals_my.html:63
+#: templates/proposals_my.html:101 templates/technologies.html:62
+#: templates/technology_view.html:60
+msgid "Type"
+msgstr "Modelo"
+
+#: templates/introductions_my.html:68 templates/introductions_my.html:103
+#: templates/introductions_my.html:148 templates/introductions_my.html:195
+msgid "Response"
+msgstr "Resposta"
+
+#: templates/introductions_my.html:69 templates/introductions_my.html:104
+#: templates/introductions_my.html:149 templates/introductions_my.html:196
+#: templates/proposals_my.html:67 templates/proposals_my.html:105
+msgid "Date"
+msgstr "Data"
+
+#: templates/introductions_my.html:70 templates/project_edit.html:69
+#: templates/user_edit.html:67
+msgid "Action"
+msgstr "Açao"
+
+#: templates/introductions_my.html:87
+msgid "response"
+msgstr "resposta"
+
+#: templates/introductions_my.html:88 templates/introductions_my.html:125
+#: templates/introductions_my.html:180 templates/introductions_my.html:222
+#: templates/proposals_my.html:121
+msgid "delete"
+msgstr "excluir"
+
+#: templates/introductions_my.html:95 templates/introductions_my.html:187
+#: templates/organization_view.html:77 templates/technology_view.html:76
+msgid "Contact"
+msgstr "Contato"
+
+#: templates/introductions_my.html:105 templates/introductions_my.html:150
+#: templates/introductions_my.html:197 templates/proposals_my.html:68
+#: templates/proposals_my.html:106
+msgid "Actions"
+msgstr "Ações"
+
+#: templates/introductions_my.html:124
+msgid "respond"
+msgstr "responder"
+
+#: templates/introductions_my.html:137
+msgid "sent"
+msgstr "enviei"
+
+#: templates/introductions_my.html:144 templates/proposals_my.html:61
+#: templates/proposals_my.html:99
+msgid "Project"
+msgstr "Projeto"
+
+#: templates/introductions_my.html:145 templates/organization_view.html:99
+#: templates/projects.html:63 templates/projects_my.html:65
+#: templates/technology_view.html:98
+msgid "Stage"
+msgstr "Etapa"
+
+#: templates/introductions_my.html:176
+msgid "Submit a Proposal"
+msgstr "Envie uma proposta"
+
+#: templates/login.html:68
+msgid "Sign in"
+msgstr "Entrar"
+
+#: templates/login.html:70
+msgid "No account?"
+msgstr "Sem conta?"
+
+#: templates/login.html:70
+msgid "Registe here"
+msgstr "Registe-se aqui"
+
+#: templates/login.html:71
+msgid "Forgot password?"
+msgstr "Esqueceu a senha?"
+
+#: templates/login.html:71
+msgid "Reset it"
+msgstr "Reinicie-o"
+
+#: templates/organization_view.html:62 templates/organization_view.html:102
+#: templates/organizations.html:66 templates/project_edit.html:63
+#: templates/project_view.html:61 templates/projects.html:66
+#: templates/projects_my.html:68 templates/technologies.html:66
+#: templates/technology_view.html:61 templates/technology_view.html:101
+msgid "Tags"
+msgstr "Tag"
+
+#: templates/organization_view.html:67 templates/technology_view.html:66
+msgid "Member since"
+msgstr "Membro desde"
+
+#: templates/organization_view.html:70 templates/project_view.html:69
+#: templates/technology_view.html:69
+msgid "Description"
+msgstr "Descrição"
+
+#: templates/organization_view.html:80 templates/technology_view.html:79
+msgid "to see more details and to submit an expression of interest"
+msgstr "para ver mais detalhes e enviar uma manifestação de interesse"
+
+#: templates/organization_view.html:96 templates/projects.html:60
+#: templates/projects_my.html:62 templates/technology_view.html:95
+msgid "Members"
+msgstr "Membros"
+
+#: templates/organization_view.html:97 templates/projects.html:61
+#: templates/projects_my.html:63 templates/technology_view.html:96
+msgid "Title"
+msgstr "Título"
+
+#: templates/organization_view.html:100 templates/organizations.html:64
+#: templates/projects.html:64 templates/projects_my.html:66
+#: templates/technologies.html:64 templates/technology_view.html:99
+msgid "Country"
+msgstr "País"
+
+#: templates/organization_view.html:101 templates/organizations.html:65
+#: templates/projects.html:65 templates/projects_my.html:67
+#: templates/technologies.html:65 templates/technology_view.html:100
+msgid "City"
+msgstr "Cidade"
+
+#: templates/organizations.html:54
+msgid "Connect with innovation hubs and other organizations to support your project"
+msgstr ""
+"Conecte-se com centros de inovação e outras organizações para apoiar seu "
+"projeto"
+
+#: templates/organizations.html:63 templates/project_edit.html:30
+#: templates/project_register.html:31 templates/project_view.html:31
+#: templates/projects.html:29 templates/technologies.html:29
+#: templates/technologies.html:63
+msgid "Organization"
+msgstr "Organização"
+
+#: templates/project_edit.html:55
+msgid "Modify Project"
+msgstr "Modificar Projeto"
+
+#: templates/project_edit.html:61 templates/project_register.html:57
+msgid "Return to my projects"
+msgstr "Voltar para meus projetos"
+
+#: templates/project_edit.html:64
+msgid "Add a tag"
+msgstr "Adicionar uma tag"
+
+#: templates/project_edit.html:70 templates/user_edit.html:68
+msgid "Tag"
+msgstr "Marcação"
+
+#: templates/project_edit.html:77 templates/user_edit.html:75
+msgid "edit"
+msgstr "editar"
+
+#: templates/project_edit.html:86
+msgid "Expressions of Interest"
+msgstr "Expressões de interesse"
+
+#: templates/project_edit.html:89
+msgid "Delete this project"
+msgstr "Exclua este projeto"
+
+#: templates/project_register.html:43
+msgid "Registe"
+msgstr "Registe"
+
+#: templates/project_register.html:56
+msgid "Register Project"
+msgstr "Registrar Projeto"
+
+#: templates/project_view.html:60
+msgid "Technology Readiness level"
+msgstr "Nível de preparação da tecnologia"
+
+#: templates/project_view.html:60
+msgid "looking for"
+msgstr "procurando por"
+
+#: templates/project_view.html:66
+msgid "Posted by"
+msgstr "postado por"
+
+#: templates/project_view.html:66
+msgid "on"
+msgstr "sobre"
+
+#: templates/project_view.html:66
+msgid "in"
+msgstr "dentro"
+
+#: templates/project_view.html:73
+msgid "Purpose"
+msgstr "Objetivo"
+
+#: templates/project_view.html:81
+msgid "The amount requested is "
+msgstr "A quantia solicitada é"
+
+#: templates/project_view.html:85
+msgid "The amount offered is "
+msgstr "O valor oferecido é"
+
+#: templates/project_view.html:90
+msgid "to see more details of the project and to submit an expression of interest"
+msgstr "para ver mais detalhes do projeto e enviar uma manifestação de interesse"
+
+#: templates/projects.html:54
+msgid "Find prototyping, validation, and scaling projects to collaborate"
+msgstr "Encontre projetos de prototipagem, validação e dimensionamento para colaborar"
+
+#: templates/projects_my.html:54
+msgid "Manage your projects"
+msgstr "Gerenciar seus projetos"
+
+#: templates/projects_my.html:55
+msgid "Create a new project"
+msgstr "Crie um novo projeto"
+
+#: templates/proposal_register.html:53
+msgid "Project Details"
+msgstr "Detalhes do Projeto"
+
+#: templates/proposal_register.html:63
+msgid "Register Proposal"
+msgstr "Registrar Proposta"
+
+#: templates/proposal_respond.html:56
+msgid "Respond this proposal"
+msgstr "Responda esta proposta"
+
+#: templates/proposals_my.html:55
+msgid "Proposals received"
+msgstr "Propostas recebidas"
+
+#: templates/proposals_my.html:62 templates/proposals_my.html:104
+msgid "Proposal"
+msgstr "Proposta"
+
+#: templates/proposals_my.html:64 templates/proposals_my.html:102
+msgid "Budget"
+msgstr "Despesas"
+
+#: templates/proposals_my.html:65 templates/proposals_my.html:103
+msgid "Partner"
+msgstr "Parceiro"
+
+#: templates/proposals_my.html:93
+msgid "Proposals sent"
+msgstr "Propostas enviadas"
+
+#: templates/tag_register.html:56
+msgid "Create a new tag"
+msgstr "Crie uma nova tag"
+
+#: templates/technologies.html:54
+msgid ""
+"Connect with technology companies, researchers, laboratories, and research "
+"organizations"
+msgstr ""
+"Conecte-se com empresas de tecnologia, pesquisadores, laboratórios e "
+"organizações de pesquisa"
+
+#: templates/technology_view.html:66
+msgid "Located in"
+msgstr "Localizado em"
+
+#: templates/user_edit.html:55
+msgid "Update my profile"
+msgstr "Atualize meu perfil"
+
+#: templates/user_edit.html:62
+msgid "Add tags"
+msgstr "Adicionar tags"
+
+#: templates/user_edit.html:87
+msgid "Delete my account"
+msgstr "Deletar minha conta"
+
+#: templates/user_register.html:54
+msgid "Register User"
+msgstr "Registrar usuário"
+
+#: templates/user_register.html:59
+msgid "If you already have an account."
+msgstr "Se você já possui uma conta."
+
+#: templates/user_register.html:60
+msgid "Sign in instead"
+msgstr "Em vez disso, faça login"
