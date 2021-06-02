@@ -16,17 +16,21 @@ from flask_share import Share
 from flask_mail import Mail
 from flask_mail import Message
 from flask_babel import Babel, get_locale, gettext
+from flask_babel import lazy_gettext
+
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 import os
 from flask import abort
 
 # CREATE INSTANCE
 app = Flask(__name__)
+app.config['WTF_I18N_ENABLED'] = True
 WTF_CSRF_SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'WTF_CSRF_SECRET_KEY')
 app.config['RECAPTCHA_PUBLIC_KEY'] = os.environ.get('RECAPTCHA_SITE_KEY')
 app.config['RECAPTCHA_PRIVATE_KEY'] = os.environ.get('RECAPTCHA_SECRET_KEY')
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+
 ckeditor = CKEditor(app)
 Bootstrap(app)
 share = Share(app)
@@ -37,8 +41,8 @@ babel = Babel(app) #babel set up
 @babel.localeselector
 def get_locale():
 
-    #return 'es'
-    return request.accept_languages.best_match(['en', 'es', 'de'])
+
+    return request.accept_languages.best_match(['en', 'fr', 'pt', 'es'])
 
 # EMAIL CONFIGURATION
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
@@ -189,26 +193,26 @@ db.create_all()
 # CREATE FORMS
 
 class RegisterUser(FlaskForm):
-    name = StringField(label='Your username', validators=[DataRequired()])
-    email = StringField(label='Your email',
+    name = StringField(label=lazy_gettext('Your username'), validators=[DataRequired()])
+    email = StringField(label=gettext('Your email'),
                         validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
-    password = PasswordField(label='Your password', validators=[DataRequired(), Length(min=6)])
-    confirm_password = PasswordField(label=('Confirm Password'), validators=[DataRequired(message='*Required'),
+    password = PasswordField(label=gettext('Your password'), validators=[DataRequired(), Length(min=6)])
+    confirm_password = PasswordField(label=gettext('Confirm Password'), validators=[DataRequired(message='*Required'),
                                                                              EqualTo('password',
-                                                                                     message='Both password fields must be equal!')])
-    type = SelectField(label='Your organization type',
-                       choices=[('Startup', 'Startup'), ('Researcher', 'Researcher'),
+                                                                                     message=gettext('Both password fields must be equal!'))])
+    type = SelectField(label=gettext('Your organization type'),
+                       choices=[((u'Startup', 'Startup')), ((u'Researcher', 'Researcher')),
                                 ('Hub or Incubator', 'Innovation hub or Incubator'),
                                 ('Research Center', 'Lab or Research Center'), ('Corporate', 'Corporate'),
                                 ('Consulting Firm', 'Consulting Firm'),
                                 ('Investment Group', 'Investment Group'), ('other organization', 'other organization')])
-    organization = StringField(label="Your organization's name")
-    description = CKEditorField(label="Tell us about your organization.")
+    organization = StringField(label=gettext("Your organization's name"))
+    description = CKEditorField(label=gettext("Tell us about your organization."))
     date = HiddenField()
-    city = StringField(label="Your city")
-    country = StringField(label="Your country")
-    subscription = SelectField(label='Your subscription type',
-                               choices=[('Startup - Free', 'Startup - Free'),
+    city = StringField(label=gettext("Your city"))
+    country = StringField(label=gettext("Your country"))
+    subscription = SelectField(label=gettext('Your subscription type'),
+                               choices=[(('Startup - Free', 'Startup - Free')),
                                         ('Researcher - Free', 'Researcher - Free'),
                                         ('Innovation hub - Free', 'Innovation hub - Free'),
                                         ('Lab or Research Center - Free', 'Lab or Research Center - Free'),
@@ -216,97 +220,97 @@ class RegisterUser(FlaskForm):
                                         ('Consulting Firm - Sponsor', 'Consulting Firm - Sponsor'),
                                         ('Investment Group - Sponsor', 'Investment Group - Sponsor')])
     recaptcha = RecaptchaField()
-    submit = SubmitField("Register")
+    submit = SubmitField(gettext("Register"))
 
 
 class RegisterProject(FlaskForm):
-    title = StringField(label='Project name', validators=[DataRequired()])
-    status = SelectField(label='The status of your project',
+    title = StringField(label=gettext('Project name'), validators=[DataRequired()])
+    status = SelectField(label=gettext('The status of your project'),
                          choices=[('Draft', 'Draft'), ('Open', 'Open'), ('Ongoing', 'Ongoing'),
                                   ('Close', 'Close'), ('Cancelled', 'Cancelled')])
-    stage = SelectField(label='The stage of your project',
-                        choices=[('Prototyping', 'Prototyping'), ('Validation', 'Validation'), ('Scaling', 'Scaling')])
-    trl = SelectField(label='Technology readiness levels',
+    stage = SelectField(label=gettext('The stage of your project'),
+                        choices=['Prototyping', 'Prototyping','Validation', 'Validation', 'Scaling','Scaling'])
+    trl = SelectField(label=gettext('Technology readiness levels'),
                       choices=[('4 Lab testing', '4 Lab testing'), ('5 Simulated testing', '5 Simulated testing'),
                                ('6 Prototype development', '6 Prototype development'),
                                ('7 Prototype ready', '7  Prototype ready'),
                                ('8 Prototype validated', '8 Prototype validated'),
                                ('9 Product market-ready', '9 Product market-ready')])
-    city = StringField(label="City where the project will be executed")
-    country = StringField(label="Country where the project will be executed")
-    description = CKEditorField(label="Tell us about your project.")
+    city = StringField(label=gettext("City where the project will be executed"))
+    country = StringField(label=gettext("Country where the project will be executed"))
+    description = CKEditorField(label=gettext("Tell us about your project."))
     date = HiddenField()
-    purpose = CKEditorField(label="What is the main deliverable of the project?")
-    type_move = SelectField(label='Type of move', choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
-    budget = StringField(label='Amount in Canadian Dollars $:')
+    purpose = CKEditorField(label=gettext("What is the main deliverable of the project?"))
+    type_move = SelectField(label=gettext('Type of move'), choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
+    budget = StringField(label=gettext('Amount in Canadian Dollars $:'))
     presented = HiddenField()
     attachment = HiddenField()
     recaptcha = RecaptchaField()
-    submit = SubmitField("Submit")
+    submit = SubmitField(gettext("Submit"))
 
 
 class ViewProject(FlaskForm):
-    title = StringField(label='Project name', validators=[DataRequired()])
-    status = SelectField(label='The status of your project',
+    title = StringField(label=gettext('Project name'), validators=[DataRequired()])
+    status = SelectField(label=gettext('The status of your project'),
                          choices=[('Draft', 'Draft'), ('Open', 'Open'), ('Ongoing', 'Ongoing'),
                                   ('Close', 'Close'), ('Cancelled', 'Cancelled')])
-    stage = SelectField(label='The stage of your project',
+    stage = SelectField(label=gettext('The stage of your project'),
                         choices=[('Prototyping', 'Prototyping'), ('Validation', 'Validation'), ('Scaling', 'Scaling')])
-    trl = SelectField(label='Technology readiness levels',
+    trl = SelectField(label=gettext('Technology readiness levels'),
                       choices=[('4 Lab testing', '4 Lab testing'), ('5 Simulated testing', '5 Simulated testing'),
                                ('6 Prototype development', '6 Prototype development'),
                                ('7 Prototype ready', '7  Prototype ready'),
                                ('8 Prototype validated', '8 Prototype validated'),
                                ('9 Product market-ready', '9 Product market-ready')])
-    city = StringField(label="City where the project will be executed")
-    country = StringField(label="Country where the project will be executed")
-    description = CKEditorField(label="Tell us about your project.")
+    city = StringField(label=gettext("City where the project will be executed"))
+    country = StringField(label=gettext("Country where the project will be executed"))
+    description = CKEditorField(label=gettext("Tell us about your project."))
     date = HiddenField()
-    purpose = CKEditorField(label="What is the main deliverable of the project?")
-    type_move = SelectField(label='Type of move', choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
-    budget = StringField(label='Amount in Canadian Dollars $:')
+    purpose = CKEditorField(label=gettext("What is the main deliverable of the project?"))
+    type_move = SelectField(label=gettext('Type of move'), choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
+    budget = StringField(label=gettext('Amount in Canadian Dollars $:'))
     presented = HiddenField()
     attachment = HiddenField()
     user_id = HiddenField()
 
 
 class ViewUser(FlaskForm):
-    name = StringField(label='Your username', validators=[DataRequired()])
-    type = SelectField(label='Your organization type',
+    name = StringField(label=gettext('Your username'), validators=[DataRequired()])
+    type = SelectField(label=gettext('Your organization type'),
                        choices=[('Startup', 'Startup'), ('Researcher', 'Researcher'),
                                 ('Hub or Incubator', 'Innovation hub or Incubator'),
                                 ('Research Center', 'Lab or Research Center'), ('Corporate', 'Corporate'),
                                 ('Consulting Firm', 'Consulting Firm'),
                                 ('Investment Group', 'Investment Group'), ('other organization', 'other organization')])
-    organization = StringField(label="Your organization's name")
-    city = StringField(label="Your city")
-    country = StringField(label="Your country")
+    organization = StringField(label=gettext("Your organization's name"))
+    city = StringField(label=gettext("Your city"))
+    country = StringField(label=gettext("Your country"))
 
 
 class RegisterTag(FlaskForm):
-    name = StringField(label='Tags or key words', validators=[DataRequired()])
-    submit = SubmitField("Tag - Submit")
+    name = StringField(label=gettext('Tags or key words'), validators=[DataRequired()])
+    submit = SubmitField(gettext("Tag - Submit"))
 
 
 class RegisterProposal(FlaskForm):
-    title = StringField(label='Title of your proposal', validators=[DataRequired()])
-    status = SelectField(label='The status of the proposal',
+    title = StringField(label=gettext('Title of your proposal'), validators=[DataRequired()])
+    status = SelectField(label=gettext('The status of the proposal'),
                          choices=[('Accepted', 'Accepted'), ('Rejected', 'Rejected')])
-    description = CKEditorField(label="Description of your proposal.")
+    description = CKEditorField(label=gettext("Description of your proposal."))
     date = HiddenField()
-    type_move = SelectField(label='Type of move', choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
-    budget = StringField(label='Amount in Canadian Dollars $:')
-    attachment = StringField(label='Proposal attachments')
+    type_move = SelectField(label=gettext('Type of move'), choices=[('Requested', 'Requested'), ('Offered', 'Offered')])
+    budget = StringField(label=gettext('Amount in Canadian Dollars $:'))
+    attachment = StringField(label=gettext('Proposal attachments'))
     recaptcha = RecaptchaField()
-    submit = SubmitField("Proposal - Submit")
+    submit = SubmitField(gettext("Proposal - Submit"))
 
 
 class LoginForm(FlaskForm):
-    email = StringField(label='Your email',
-                        validators=[InputRequired(), Email(message='Invalid email')])
-    password = PasswordField(label='Your password', validators=[InputRequired()])
-    remember = BooleanField(label='Remember me')
-    submit = SubmitField("Log In")
+    email = StringField(label=gettext('Your email'),
+                        validators=[InputRequired(), Email(message=gettext('Invalid email'))])
+    password = PasswordField(label=gettext('Your password'), validators=[InputRequired()])
+    remember = BooleanField(label=gettext('Remember me'))
+    submit = SubmitField(gettext("Log In"))
 
 
 class RegisterEoi(FlaskForm):
@@ -321,26 +325,26 @@ class RegisterEoi(FlaskForm):
     type = HiddenField()
     status = HiddenField()
     date = HiddenField()
-    response = StringField(label="Provide a short message")
+    response = StringField(label=gettext("Provide a short message"))
     project_id = HiddenField()
-    submit = SubmitField("Expression of Interest EOI - Submit")
+    submit = SubmitField(gettext("Expression of Interest EOI - Submit"))
 
 
 class RequestResetForm(FlaskForm):
-    email = StringField(label='Your email',
-                        validators=[InputRequired(), Email(message='Invalid email')])
-    submit = SubmitField("Request Password Reset")
+    email = StringField(label=gettext('Your email'),
+                        validators=[InputRequired(), Email(message=gettext('Invalid email'))])
+    submit = SubmitField(gettext("Request Password Reset"))
 
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user is None:
-            raise ValidationError('There is not account with that email.')
+            raise ValidationError(gettext('There is not account with that email.'))
 
 class ResetPasswordForm(FlaskForm):
-    password = PasswordField(label='Your password', validators=[DataRequired(), Length(min=6)])
-    confirm_password = PasswordField(label='Confirm Password', validators=[DataRequired(message='*Required'),
+    password = PasswordField(label=gettext('Your password'), validators=[DataRequired(), Length(min=6)])
+    confirm_password = PasswordField(label=gettext('Confirm Password'), validators=[DataRequired(message='*Required'),
                                                                              EqualTo('password')])
-    submit = SubmitField('Reset Password')
+    submit = SubmitField(gettext('Reset Password'))
 
 
 # Routes
@@ -447,7 +451,6 @@ def send_reset_email(user):
                   recipients=[user.email])
     msg.body = f'''To reset your password, visit the following link:
 {url_for('reset_token', token=token, _external=True)}
-
 If you did not make this request then simply ignore this email and no changes will be done
 '''
     mail.send(msg)
@@ -973,4 +976,4 @@ def proposal_delete():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='localhost', port=5000)
