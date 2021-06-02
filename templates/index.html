@@ -1,0 +1,275 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}InnScience{% endblock %}
+
+{% block styles %}
+{{super()}}
+{{ share.load() }}
+<link rel="stylesheet" href="{{url_for('static', filename='css/starter-template.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">{{ _('Toggle navigation') }}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+              <img src="{{ url_for('static', filename='img/logo.png') }}" alt="InnScience logo" style="position: relative; top: -17.5px;" width="140">
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ url_for('projects') }}">{{ _('Projects') }}</a></li>
+            <li><a href="{{ url_for('technologies') }}">{{ _('Technologies') }}</a></li>
+            <li><a href="{{ url_for('organizations') }}">{{ _('Organizations') }}</a></li>
+          </ul>
+
+          {% if current_user.is_authenticated %}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('dashboard') }}" >{{ current_user.name }}'s {{ _('accounts') }}</a></li>
+            <li><a href="{{ url_for('logout') }}">{{ _('Log Out') }}</a></li>
+          </ul>
+
+          {% else %}
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+            <li><a href="{{ url_for('user_new') }}">{{ _('Register') }}</a></li>
+          </ul>
+          {% endif %}
+
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+     <!-- Heading -->
+
+    <section class="colored-section" id="cta">
+        <div class="container">
+            {{ share.create(title='Share with: ', sites='facebook, twitter, linkedin', mobile_sites='facebook, twitter, linkedin', align='right') }}
+
+            <div class="starter-template">
+
+                <h1>{{ _('A research and development (R&D) collaboration platform') }}</h1>
+                <p class="lead">{{ _('We connect industries with researchers and other stakeholders') }}<br> {{ _('to support Prototyping, Validation and Scaling.') }} </p>
+            </div>
+        </div><!-- /.container -->
+    </section >
+
+
+    <!-- Call to Action -->
+
+    <section class="colored-section" id="cta">
+
+        <div class="container-fluid">
+            <h3 class="big-heading"> {{ _('Find your R&D partner Today.') }}</h3>
+            <a type="button" href="{{ url_for('user_new') }}" class="btn btn-primary call-to-action">{{ _('Register for a Free Account') }}</a>
+        </div>
+    </section>
+
+
+    <!-- Features -->
+
+    <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="feature-box col-lg-3">
+                <i class="icon fas fa-check-circle fa-4x"></i>
+
+                <h3 class="feature-title">{{ _('Intelligent') }}</h3>
+                <p> {{ _('Our matching technology scans numerous profiles & finds the most relevant partners.') }}</p>
+            </div>
+
+            <div class="feature-box col-lg-3">
+                <i class="icon fas fa-eye fa-4x"></i>
+                <h3 class="feature-title">  {{ _('Convenient') }}</h3>
+                <p>  {{ _('Access innovative technologies with researchers & startups') }}</p>
+            </div>
+
+            <div class="feature-box col-lg-3">
+                <i class="icon fas fa-heart fa-4x"></i>
+                <h3 class="feature-title">{{ _('Synergistic') }}</h3>
+                <p>{{ _('Access validation opportunities with industries & organizations') }}</p>
+            </div>
+
+            <div class="feature-box col-lg-3">
+                <i class="icon fas fa-globe fa-4x"></i>
+                <h3 class="feature-title">{{ _('International') }}</h3>
+                <p>{{ _('Ongoing support for international R&D projects') }}</p>
+            </div>
+        </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+    <section class="colored-section" id="testimonials">
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{{ url_for('static', filename='images/lady-img.jpg') }}" alt="Customer 1">
+                    <div class="carousel-caption">
+                        <h2 class="testimonial-text"> {{ _('Testimonial customer 1.') }}</h2>
+                        <em>{{ _('Pebbles, New York') }}</em>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static', filename='images/dog-img.jpg') }}" alt="Customer 2">
+                    <div class="carousel-caption">
+                        <h2 class="testimonial-text">{{ _('Testimonial customer 1.') }}</h2>
+                        <em>{{ _('Pebbles, New York') }}</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">{{ _('Previous') }}</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">{{ _('Next') }}</span>
+            </a>
+        </div>
+
+
+    </section>
+
+
+  <!-- Press -->
+
+    <section class="colored-section" id="press">
+    <img class="press-logo" src="{{ url_for('static', filename='images/techcrunch.png') }}" alt="tc-logo">
+    <img class="press-logo" src="{{ url_for('static', filename='images/tnw.png') }}" alt="tnw-logo">
+    <img class="press-logo" src="{{ url_for('static', filename='images/bizinsider.png') }}" alt="biz-insider-logo">
+    <img class="press-logo" src="{{ url_for('static', filename='images/mashable.png') }}" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">{{ _('A Plan for Everyones Needs') }}</h2>
+    <p>{{ _('Simple and affordable price plans for your organization.') }}</p>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3> {{ _('Early Majority') }}</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">{{ _('Free') }}</h2>
+            <p>{{ _('User Profile') }}</p>
+            <p>{{ _('Two Open Projects') }}</p>
+            <p>{{ _('Unlimited Project-Connections') }}</p>
+            <p>{{ 2%_('Effective Project-Connection') }}</p>
+
+            <button class="btn btn-default btn-lg" type="button">{{ _('Sign Up') }}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>{{ _('Early Adopter') }}</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$100 / mo</h2>
+            <p>{{ _('Early Majority +') }}</p>
+            <p>{{ _('Multiple Open  Projects') }}</p>
+            <p>{{ _('5 User connections') }}</p>
+            <p>{{ _('Account manager') }}</p>
+            <button class="btn btn-primary btn-lg" type="button">{{ _('Sign Up') }}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>{{ _('Innovator') }}</h3>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">$200 / mo</h2>
+            <p>{{ _('Early Adopter +') }}</p>
+            <p>{{ _('5% Project manager') }}</p>
+            <p>{{ _('International R&D agreements') }}</p>
+            <p>{{ _('International IP agreements') }}</p>
+            <button class="btn btn-primary btn-lg" type="button">{{ _('Sign Up') }}</button>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">{{ _('Find your R&D partner Today.') }}</h3>
+      <a type="button" href="{{ url_for('user_new') }}" class="btn btn-primary call-to-action">{{ _('Register for a Free Account') }}</a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-linkedin"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p id="copyright">© Copyright 2018 InnScience</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+{% endblock %}

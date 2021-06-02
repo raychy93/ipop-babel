@@ -1,0 +1,93 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Project Edit {% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/signin.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="InnScience logo" style="position: relative; top: -17.5px;" width="140">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('projects') }}">{{ _('Projects') }}</a></li>
+                    <li><a href="{{ url_for('technologies') }}">{{ _('Technologies') }}</a></li>
+                    <li><a href="{{ url_for('organizations') }}">{{ _('Organization') }}</a></li>
+                </ul>
+
+                {% if current_user.is_authenticated %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('dashboard') }}" >{{ current_user.name }}'s account</a></li>
+                        <li><a href="{{ url_for('logout') }}">{{ _('Log Out') }}</a></li>
+                    </ul>
+
+                {% else %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+                        <li><a href="{{ url_for('user_new') }}">{{ _('Register') }}</a></li>
+                    </ul>
+                {% endif %}
+
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+<div class="container">
+  <h3>{{ _('Modify Project') }}</h3>
+  <hr>
+    {{ wtf.quick_form(form, novalidate=True) }}
+    {{ ckeditor.load() }}
+  <hr>
+  <br>
+  <h3><a href="{{ url_for('projects_my') }}">{{ _('Return to my projects') }}</a></h3>
+  <br>
+    <h2>{{ _('Tags') }}</h2>
+    <h5><a href="{{ url_for('project_tag_new', project_id=project.id) }}">{{ _('Add a tag') }}</a></h5>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ _('Action') }}</th>
+              <th scope="col">{{ _('Tag') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for tag in project.tags %}
+            <tr>
+              <th scope="row">{{ loop.index }}</th>
+              <td><a href="{{ url_for('tag_project_edit', tag_id=tag.id) }}">{{ _('edit') }}</a> |
+                <a href="{{ url_for('tag_project_remove', tag_id=tag.id, project_id=project.id) }}">x</a></td>
+              <td> {{ tag.name }} </td>
+
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+  <br>
+    <h2>{{ _('Expressions of Interest') }} - EOIs</h2>
+
+  <br>
+  <h3><a href="{{ url_for('project_delete', project_id=project.id) }}" class="text-danger">{{ _('Delete this project') }}</a></h3>
+</div>
+
+
+{% endblock %}

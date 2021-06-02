@@ -1,0 +1,236 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}My Introductions{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/starter-template.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="InnScience logo" style="position: relative; top: -17.5px;" width="140">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('projects') }}">{{ _('Projects') }}</a></li>
+                    <li><a href="{{ url_for('technologies') }}">{{ _('Technologies') }}</a></li>
+                    <li><a href="{{ url_for('organizations') }}">{{ _('Organizations') }}</a></li>
+                </ul>
+
+                {% if current_user.is_authenticated %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('dashboard') }}" >{{ current_user.name }}'s account</a></li>
+                        <li><a href="{{ url_for('logout') }}">{{ _('Log Out') }}</a></li>
+                    </ul>
+
+                {% else %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('login') }}">{{ _('Log In') }}</a></li>
+                        <li><a href="{{ url_for('user_new') }}">{{ _('Register') }}</a></li>
+                    </ul>
+                {% endif %}
+
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+    <div class="container">
+        <h4>received - EOIs</h4>
+        <h5><a href="{{ url_for('dashboard') }}">{{ _('Return to my dashboard') }}</a></h5>
+        <h5>{{ _('Projects') }}</h5>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ _('Projects') }}</th>
+              <th scope="col">{{ _('Status') }}</th>
+              <th scope="col">{{ _('Name') }}</th>
+              <th scope="col">{{ _('Type') }}</th>
+              <th scope="col">{{ _('Response') }}</th>
+              <th scope="col">{{ _('Date') }}</th>
+              <th scope="col">{{ _('Action') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for introduction in eoi_project_received %}
+            <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td> {% for project in introduction.projects %}
+                      {{ project.title }}
+                      {% endfor %}
+                  </td>
+                  <td> {{ introduction.status }} </td>
+                  <td> {{ introduction.user.name }} </td>
+                  <td> {{ introduction.user.type }} </td>
+                  <td> {{ introduction.response }} </td>
+                  <td> {{ introduction.date }} </td>
+                  <td>
+                      <a href="{{ url_for('eoi_edit', eoi_id=introduction.id) }}" class="btn btn-primary btn-sm">{{ _('response') }}</a>
+                      <a href="{{ url_for('eoi_delete', eoi_id=introduction.id) }}" class="btn btn-danger btn-sm">{{ _('delete') }}</a>
+                  </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <h5>{{ _('Contact') }}</h5>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ _('Name') }}</th>
+              <th scope="col">{{ _('Type') }}</th>
+              <th scope="col">{{ _('Status') }}</th>
+              <th scope="col">{{ _('Response') }}</th>
+              <th scope="col">{{ _('Date') }}</th>
+              <th scope="col">{{ _('Actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for eoi in eoi_user_received %}
+            <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td>
+                      {% if eoi.user.type in ['Startup','Researcher','Research Center'] %}
+                       <a href="{{ url_for('technology_view', technology_id=eoi.user.id) }}">{{ eoi.user.name }}</a>
+                      {% else %}
+                      <a href="{{ url_for('organization_view', organization_id=eoi.user.id) }}">{{ eoi.user.name }}</a>
+                      {% endif %}
+                  </td>
+                  <td> {{ eoi.user.type }} </td>
+                  <td> {{ eoi.status }} </td>
+                  <td> {{ eoi.response }} </td>
+                  <td> {{ eoi.date }} </td>
+                  <td>
+                      <a href="{{ url_for('eoi_edit', eoi_id=eoi.id) }}" class="btn btn-primary btn-sm">{{ _('respond') }}</a>
+                      <a href="{{ url_for('eoi_delete', eoi_id=eoi.id) }}" class="btn btn-danger btn-sm">{{ _('delete') }}</a>
+                  </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
+</div>
+
+    <div class="container-fluid">
+    <div class="container">
+        <h4>{{ _('sent') }} - EOIs</h4>
+        <h5><a href="{{ url_for('dashboard') }}">{{ _('Return to my dashboard') }}</a></h5>
+        <h5>{{ _('Projects') }}</h5>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ _('Project') }}</th>
+              <th scope="col">{{ _('Stage') }}</th>
+              <th scope="col">TRL</th>
+              <th scope="col">{{ _('Status') }}</th>
+              <th scope="col">{{ _('Response') }}</th>
+              <th scope="col">{{ _('Date') }}</th>
+              <th scope="col">{{ _('Actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for introduction in eoi_project_sent %}
+            <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td> {% for project in introduction.projects %}
+                      {{ project.title }}
+                      {% endfor %}
+                  </td>
+                  <td> {% for project in introduction.projects %}
+                      {{ project.stage }}
+                      {% endfor %}
+                  </td>
+                  <td> {% for project in introduction.projects %}
+                      {{ project.trl }}
+                      {% endfor %}
+                  </td>
+                  <td> {{ introduction.status }} </td>
+                  <td> {{ introduction.response }} </td>
+                  <td> {{ introduction.date }} </td>
+                  <td>
+                      {% if introduction.status == "Accepted" %}
+
+                          {% for project in introduction.projects %}
+                      <a href="{{ url_for('proposal_new', eoi_id=introduction.id, project_id=project.id) }}" class="btn btn-primary btn-sm">{{ _('Submit a Proposal') }}</a>
+                          {% endfor %}
+
+                      {% endif %}
+                      <a href="{{ url_for('eoi_delete', eoi_id=introduction.id) }}" class="btn btn-danger btn-sm">{{ _('delete') }}</a>
+                  </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <h5>{{ _('Contact') }}</h5>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">{{ _('Name') }}</th>
+              <th scope="col">{{ _('Type') }}</th>
+              <th scope="col">{{ _('Status') }}</th>
+              <th scope="col">{{ _('Response') }}</th>
+              <th scope="col">{{ _('Date') }}</th>
+              <th scope="col">{{ _('Actions') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for eoi in eoi_user_sent %}
+            <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td>
+                      {% for user in eoi.users %}
+                          {% if user != current_user %}
+                      {{ user.name }}
+                          {% endif %}
+                      {% endfor %}
+                  </td>
+                  <td> {% for user in eoi.users %}
+                      {% if user != current_user %}
+                      {{ user.type }}
+                      {% endif %}
+                      {% endfor %}
+                  </td>
+
+                  <td> {{ eoi.status }} </td>
+                  <td> {{ eoi.response }} </td>
+                  <td> {{ eoi.date }} </td>
+                  <td>
+                      <a href="{{ url_for('eoi_delete', eoi_id=eoi.id) }}" class="btn btn-danger btn-sm">{{ _('delete') }}</a>
+                  </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+
+{%- endblock %}

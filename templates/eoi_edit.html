@@ -1,0 +1,25 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} EOI edit {% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/signin.css')}}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <form class="form-signin" method="post" role="form">
+            <h2 class="form-signin-heading">{{ _('Respond the Expression of Interest') }}</h2>
+            {{ form.hidden_tag() }}
+            {{ wtf.form_errors(form, hiddens="only") }}
+            {{ wtf.form_field(form.status) }}
+            {{ wtf.form_field(form.response) }}
+            <input class="btn btn-lg btn-primary btn-block" type="submit"> </input>
+        </form>
+    </div>
+
+{% endblock %}
